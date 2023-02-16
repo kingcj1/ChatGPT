@@ -7,7 +7,7 @@ import { pathToFileURL } from 'url'
 import ChatGPTClient from '../src/ChatGPTClient.js';
 import BingAIClient from '../src/BingAIClient.js';
 import { KeyvFile } from 'keyv-file';
-// import { initProject } from '../src/wechaty.js'
+import { initProject } from '../src/wechaty.js'
 const arg = process.argv.find((arg) => arg.startsWith('--settings'));
 let path;
 if (arg) {
@@ -66,7 +66,7 @@ await server.register(cors, {
     origin: '*',
 });
 
-// await initProject();
+await initProject();
 
 server.post('/conversation', async (request, reply) => {
     const body = request.body || {};
