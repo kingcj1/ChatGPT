@@ -1,6 +1,6 @@
 export default {
     // Your OpenAI API key (for `ChatGPTClient`)
-    openaiApiKey: process.env.OPENAI_API_KEY || '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',
+    openaiApiKey: process.env.OPENAI_API_KEY || '',
     chatGptClient: {
         // (Optional) Support for a reverse proxy for the completions endpoint (private API server).
         // Warning: This will expose your `openaiApiKey` to a third-party. Consider the risks before using this.
